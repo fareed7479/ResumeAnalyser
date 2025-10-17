@@ -51,6 +51,11 @@ app.use('/api/resume', resumeRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/reports', reportRoutes);
 
+// Route aliases for frontend compatibility
+app.use('/resume', resumeRoutes);
+app.use('/chat', chatRoutes);
+app.use('/reports', reportRoutes);
+
 // Root endpoint
 app.get('/', (req, res) => {
   res.json({
